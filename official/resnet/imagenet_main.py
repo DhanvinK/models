@@ -59,7 +59,7 @@ def _parse_example_proto(example_serialized):
 
   The output of the build_image_data.py image preprocessing script is a dataset
   containing serialized Example protocol buffers. Each Example proto contains
-  the following fields:
+  the following fields (values are included as examples):
 
     image/height: 462
     image/width: 581
