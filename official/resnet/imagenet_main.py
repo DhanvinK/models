@@ -24,7 +24,7 @@ import sys
 import tensorflow as tf
 
 from official.resnet import resnet
-from official.resnet import vgg_preprocessing
+from official.resnet import imagenet_preprocessing
 
 _DEFAULT_IMAGE_SIZE = 224
 _NUM_CHANNELS = 3
@@ -140,7 +140,7 @@ def parse_record(raw_record, is_training):
   """
   image_buffer, label, bbox = _parse_example_proto(raw_record)
 
-  image = vgg_preprocessing.preprocess_image(
+  image = imagenet_preprocessing.preprocess_image(
       image_buffer=image_buffer,
       bbox=bbox,
       output_height=_DEFAULT_IMAGE_SIZE,
